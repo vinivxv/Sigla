@@ -1,23 +1,27 @@
 programa {
   funcao inicio() {
+    real notas[100]
+    inteiro contador, quantidade 
     real media = 0.0
-    real notas [6]
-    real soma = 00
-    inteiro contador 
+    real soma = 0.0
 
-    para(contador=0;contador<6;contador++){
-      escreva("Digite as notas dos alunos: ")
-      leia (notas[contador])
-      escreva("\n")
-      soma = notas[contador] + soma
+    escreva("Digite a quantidade de notas: ")
+    leia(quantidade)
+
+    para(contador=0;contador<quantidade;contador++){
+      escreva("Informe a nota ", contador+1 , ": ")
+      leia(notas[contador])
+
+
+      soma = soma + notas[contador]
+    
     }
-    media = soma/6
-    escreva("Media da turma foi:", media)
-    escreva("\n")
-    se(media<7){
-      escreva("Turma abaixo da media")
+  media = soma/quantidade
+  
+    se(media <7){
+      escreva("abaixo")
     }senao{
-      escreva("Turma acima da media")
+      escreva("acima")
     }
-  }
+}
 }
